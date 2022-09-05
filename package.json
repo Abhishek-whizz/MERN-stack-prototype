@@ -1,0 +1,32 @@
+{
+  "name": "e-business-website",
+  "version": "1.0.0",
+  "description": "node",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "server": "nodemon server.js",
+    "client": "npm start --prefix client",
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "heroku-postbuild":"NPM_CONFIG_PRODUCTION = false npm install --prefix client  && npm run build --prefix client"
+  },
+  "keywords": [
+    "node.js"
+  ],
+  "author": "Abhi",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.25.0",
+    "bcryptjs": "^2.4.3",
+    "concurrently": "^7.0.0",
+    "cors": "^2.8.5",
+    "express": "^4.17.2",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^6.2.1",
+    "nodemon": "^2.0.15",
+    "react-bootstrap": "^2.1.2",
+    "react-gtm-module": "^2.0.11",
+    "react-redux": "^7.2.6",
+    "redux": "^4.1.2"
+  }
+}
